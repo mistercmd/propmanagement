@@ -10,10 +10,26 @@ import TextLink from '../textLink';
 class SignupForm extends Component {
    render() {
       return (
-        <form className="sign-in-form">
-            <FormTitle className="sign-in-form__title" text="Login"/>
+        <form className="sign-up-form">
+            <FormTitle className="sign-up-form__title" text="New User"/>
             <Field 
-            className="sign-in-form__email" 
+            className="sign-up-form__fullname" 
+            placeholder="Enter Your Full Name"
+            name="fullname" 
+            type="text"
+            title="Full Name"
+            component={FormInput} 
+            />
+            <Field 
+            className="sign-up-form__unit" 
+            placeholder="Enter Unit #"
+            name="unit" 
+            type="text"
+            title="Unit #"
+            component={FormInput} 
+            />
+            <Field 
+            className="sign-up-form__email" 
             placeholder="Enter Email"
             name="Email" 
             type="email"
@@ -21,7 +37,7 @@ class SignupForm extends Component {
             component={FormInput} 
             />
             <Field 
-            className="sign-in-form__password" 
+            className="sign-up-form__password" 
             placeholder="Enter Password"
             name="password" 
             type="password"
@@ -29,15 +45,14 @@ class SignupForm extends Component {
             component={FormInput} 
             />
             <Field 
-            className="sign-in-form__login" 
-            name="Login" 
+            className="sign-up-form__create-account" 
+            name="createaccount" 
             type="submit"
-            title="login"
+            title="Create Account"
             component={FormButton} 
             />
-            <div className="sign-in-form__text-links">
-                <TextLink to="/forgot" text="Forgot Password"/>
-                <TextLink to="/signup" text="Not a member? Register here"/>
+            <div className="sign-up-form__text-links">
+                <TextLink to="/signin" text="Already Registered? Login"/>
             </div>
         </form>
       )
