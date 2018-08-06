@@ -21,7 +21,7 @@ import Signup from './components/auth/signup';
 import Signin from './components/auth/signin';
 
 
-import dashboard from './components/dashboard';
+import Dashboard from './components/dashboard';
 
 
 
